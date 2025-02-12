@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.model.Episodio;
 import br.com.alura.screenmatch.model.Filme;
 import br.com.alura.screenmatch.model.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -18,31 +20,39 @@ public class Principal {
         outroFilme.setAnoDeLancamento(2014);
         outroFilme.setDuracaoEmMinutos(101);
         outroFilme.setIncluidoNoPlano(true);
+//
+//        Serie serie = new Serie();
+//        serie.setNome("La Casa de Papel");
+//        serie.setAnoDeLancamento(2017);
+//        serie.setIncluidoNoPlano(true);
+//        serie.setAtiva(true);
+//        serie.setTemporadas(5);
+//        serie.setEpisodiosPorTemporada(10);
+//        serie.setMinutosPorEpisodio(45);
+//
+//        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+//        calculadora.inclui(favorito);
+//        calculadora.inclui(outroFilme);
+//        calculadora.inclui(serie);
+//
+//        System.out.printf("Tempo total: %d\n", calculadora.getTempoTotal());
+//
+//        FiltroRecomendacao filtro = new FiltroRecomendacao();
+//        filtro.filtra(favorito);
+//
+//        Episodio episodio = new Episodio();
+//        episodio.setNumero(1);
+//        episodio.setSerie(serie);
+//        episodio.setTotalVisualizacoes(300);
+//        filtro.filtra(episodio);
 
-        Serie serie = new Serie();
-        serie.setNome("La Casa de Papel");
-        serie.setAnoDeLancamento(2017);
-        serie.setIncluidoNoPlano(true);
-        serie.setAtiva(true);
-        serie.setTemporadas(5);
-        serie.setEpisodiosPorTemporada(10);
-        serie.setMinutosPorEpisodio(45);
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(outroFilme);
 
-        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-        calculadora.inclui(favorito);
-        calculadora.inclui(outroFilme);
-        calculadora.inclui(serie);
-
-        System.out.printf("Tempo total: %d\n", calculadora.getTempoTotal());
-
-        FiltroRecomendacao filtro = new FiltroRecomendacao();
-        filtro.filtra(favorito);
-
-        Episodio episodio = new Episodio();
-        episodio.setNumero(1);
-        episodio.setSerie(serie);
-        episodio.setTotalVisualizacoes(300);
-        filtro.filtra(episodio);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro Filme: " + listaDeFilmes.get(0));
+        System.out.println(listaDeFilmes);
 
     }
 }

@@ -18,4 +18,9 @@ public class Filme extends Titulo implements Classificavel {
     public int getClassificacao() {
         return (int) obtemMedia() / 2;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Filme: %s (%d)", this.getNome(), this.getAnoDeLancamento());
+    }
 }
