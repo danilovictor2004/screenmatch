@@ -9,42 +9,13 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme favorito = new Filme();
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
+        Filme favorito = new Filme("The Matrix", 1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("John Wick");
-        outroFilme.setAnoDeLancamento(2014);
+        Filme outroFilme = new Filme("John Wick", 2014);
         outroFilme.setDuracaoEmMinutos(101);
         outroFilme.setIncluidoNoPlano(true);
-//
-//        Serie serie = new Serie();
-//        serie.setNome("La Casa de Papel");
-//        serie.setAnoDeLancamento(2017);
-//        serie.setIncluidoNoPlano(true);
-//        serie.setAtiva(true);
-//        serie.setTemporadas(5);
-//        serie.setEpisodiosPorTemporada(10);
-//        serie.setMinutosPorEpisodio(45);
-//
-//        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-//        calculadora.inclui(favorito);
-//        calculadora.inclui(outroFilme);
-//        calculadora.inclui(serie);
-//
-//        System.out.printf("Tempo total: %d\n", calculadora.getTempoTotal());
-//
-//        FiltroRecomendacao filtro = new FiltroRecomendacao();
-//        filtro.filtra(favorito);
-//
-//        Episodio episodio = new Episodio();
-//        episodio.setNumero(1);
-//        episodio.setSerie(serie);
-//        episodio.setTotalVisualizacoes(300);
-//        filtro.filtra(episodio);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(favorito);
