@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.model.Serie;
 import br.com.alura.screenmatch.model.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComLista {
     public static void main(String[] args) {
@@ -21,6 +22,8 @@ public class PrincipalComLista {
         lista.add(favorito);
         lista.add(outroFilme);
         lista.add(serie);
+        Collections.sort(lista);
+        System.out.println(lista);
 
         for (Titulo item : lista) {
             System.out.println("Nome: "+ item.getNome());
